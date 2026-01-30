@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: whatsapp-bot
+    env: docker
+    dockerfilePath: Dockerfile
+    branch: main
+    region: oregon
+    plan: starter
+    instanceType: starter
+    autoDeploy: true
+    envVars:
+      - key: WHATSAPP_TOKEN
+        sync: false
+      - key: PHONE_NUMBER_ID
+        sync: false
+      - key: APP_SECRET
+        sync: false
+      - key: VERIFY_TOKEN
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: ADMIN_TOKEN
+        sync: false
